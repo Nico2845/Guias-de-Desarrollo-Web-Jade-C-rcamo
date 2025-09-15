@@ -1,0 +1,231 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente para párrafos */
+    line-height: 1.6;
+    background: #f8bac8; 
+    color: #333;
+}
+
+main {
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+header {
+    width: 100%;
+    color: #fff;
+    background-color: #4c2f45; 
+    padding: 20px;
+    text-align: center;
+    font-family: "Chewy", cursive; 
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 15px;
+}
+
+nav ul li a {
+    color: #f9f6f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f289a5;
+}
+
+section {
+    margin: 50px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Shadows Into Light", cursive;
+    font-size: 2rem;
+    color: #713e5a; 
+}
+
+
+.yo {
+    position: relative;
+    text-align: center;
+}
+
+.yo h2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background: rgba(76, 47, 69, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+
+.yo img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.intro {
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+.galeria {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.galeria div {
+    width: 220px;
+    text-align: center;
+}
+
+.galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.familia {
+    display: flex;
+    
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.familia div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.familia img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+.amor {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.amor img {
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.amor.derecha img { order: 2; }
+.amor.izquierda img { order: 1; }
+
+
+.full-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+
+.estudios {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.estudios article {
+    text-align: center;
+    width: 250px;
+}
+
+.estudios img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.galeria-mascotas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria-mascotas div {
+    width: 220px;
+    text-align: center;
+}
+
+.galeria-mascotas img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    background: #124607; 
+    color: #f9f6f6;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-radius: 12px 12px 0 0;
+}
+
+footer a {
+    color: #f289a5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
