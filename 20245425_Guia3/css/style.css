@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    text-align: justify;
+}
+
+header{
+    background: #16A085;
+    height: 130px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer{
+    margin-top: 20px; 
+    background: #16A085;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header, div, footer div{
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+}
+
+h1{
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{text-align: center;}
+
+section{
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden;
+    display: flex;  
+    flex-wrap: wrap-reverse;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 140px;
+    margin-bottom: 60px;
+}
+
+section article{
+    font-size: 0.9rem;
+    height: 340px;
+    float: left;        
+    margin: 0 0.5% 20px;  
+    width: 32.33%;     
+    box-sizing: border-box;
+    border: 2px dashed #16A085;
+    padding: 1%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+section article img {
+    height: 180px;
+    max-width: 100%;
+    display: block;
+    margin: 5px auto;
+}
+
+footer div{
+    padding-top: 1rem;
+}
+
+section article:nth-child(2){
+    background-color: rgba(70, 130, 180, 0.9);
+    position: static;
+    left: 100px;
+    top: 50px;
+    display: none;
+}
+
