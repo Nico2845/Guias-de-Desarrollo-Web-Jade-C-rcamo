@@ -30,7 +30,7 @@ nav ul li a:hover{
 }
 
 nav ul li a#inicio{
-    background: url(/img/turismo/home.png) no-repeat 0px 3px;
+    background: url(../img/turismo/home.png) no-repeat 0px 3px;
     padding-left: 40px;
 }
 
@@ -42,4 +42,5 @@ nav ul li a#planes{
 nav ul li a#galeria{
     background: url(/img/turismo/galeria.png) no-repeat 0px 3px;
     padding-left: 40px;
+
 }
