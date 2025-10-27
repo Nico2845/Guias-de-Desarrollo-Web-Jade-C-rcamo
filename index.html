@@ -1,85 +1,338 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guía 1 - Ejemplos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Estudiantil - Jade Cárcamo</title>
   <style>
+    /* ----- ESTILOS GENERALES ----- */
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Poppins", Arial, sans-serif;
       margin: 0;
-      padding: 0 40px;
-      background-color: #f5f5f5;
+      padding: 0;
+      background-color: #f8f5fb;
+      color: #333;
       text-align: center;
     }
 
-    h1 {
-      margin-top: 40px;
-      color: #2e4d2e; 
+    h1, h2, h3 {
+      color: #5b3d7a;
     }
 
     p {
       font-size: 1.1rem;
-      margin-bottom: 30px;
-      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ----- CONTENEDOR PRINCIPAL ----- */
+    .contenedor {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ----- SECCIÓN: DATOS PERSONALES ----- */
+    .datos-personales {
+      background-color: #f3e8ff;
+      border-radius: 15px;
+      padding: 40px;
+      margin: 30px 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .datos-personales img {
+      width: 280px;
+      height: 280px;
+      border-radius: 140px;
+      object-fit: cover;
+      margin: 10px;
+      border: 5px solid #b47ede;
+    }
+
+    .info-personal {
+      max-width: 600px;
+    }
+
+    /* ----- SECCIÓN: INFORMACIÓN DE LA MATERIA ----- */
+    .materia {
+      background-color: #fbe7ff;
+      border-radius: 15px;
+      padding: 40px;
+      margin: 30px 0;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .materia h3 {
+      color: #6a3fa0;
+    }
+
+    .contenido-materia h4 {
+      color: #8a4fb6;
+      margin-top: 20px;
+    }
+
+    .contenido-materia ul {
+      margin-left: 30px;
+      line-height: 1.6;
+    }
+
+    /* ----- SECCIÓN: GUÍAS ----- */
+    .guias {
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .guia {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px 0;
+      text-align: left;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .guia h2 {
+      color: #a156cc;
     }
 
     .boton {
       display: inline-block;
-      margin: 15px;
-      padding: 15px 25px;
+      margin: 10px;
+      padding: 12px 20px;
       font-size: 1rem;
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background-color: #a156cc; 
+      background-color: #a156cc;
       border-radius: 8px;
-      transition: 0.3 s;
+      transition: 0.3s;
     }
 
     .boton:hover {
-      background-color: #4b604b; 
+      background-color: #6b3a90;
     }
 
+    /* ----- SECCIÓN: FODA ----- */
+    .foda {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin: 50px 0;
+      width: 100%;
+    }
+
+    .foda div {
+      border-radius: 15px;
+      padding: 25px;
+      text-align: left;
+      color: #3c2a4d;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .foda div:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .fortaleza {
+      background-color: #e9d8fd; 
+    }
+
+    .oportunidad {
+      background-color: #f3d1f4; 
+    }
+
+    .debilidad {
+      background-color: #f9e3ff; 
+    }
+
+    .amenaza {
+      background-color: #f7d4eb; 
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .datos-personales {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-personal {
+        text-align: center;
+      }
+
+      .foda {
+        grid-template-columns: 1fr;
+      }
+
+      .boton {
+        display: block;
+        margin: 10px auto;
+      }
+    }
+
+    /* ----- FOOTER ----- */
     footer {
-      margin-top: 50px;
+      background-color: #e6d4f7;
       padding: 20px;
-      background-color: #dcdcdc; 
-      color: #222;
-      border-radius: 5px;
+      border-radius: 10px;
+      color: #3c2a4d;
+      margin-top: 50px;
+      width: 100%;
     }
   </style>
 </head>
+
 <body>
+  <div class="contenedor">
 
-  <h1>Guía 1 - Ejemplos</h1>
-  <p>Haz clic en los botones para ver cada ejemplo:</p>
+    <section class="datos-personales">
+      <img src="img/jj.jpg" alt="Foto del estudiante">
 
-  <a href="20245425_Guia1/estilos_embebidos.html" class="boton">Ejemplo 1</a>
-  <a href="20245425_Guia1/ejemplo2.html" class="boton">Ejemplo 2</a>
-  <a href="20245425_Guia1/paises.html" class="boton">Ejemplo 3</a>
-  <a href="20245425_Guia1/scorpion.html" class="boton">Ejemplo 4</a>
+      <div class="info-personal">
+        <h1>Jade Nicole Cárcamo Vásquez</h1>
+        <h3>Carnet: 20245425</h3>
+        <p>
+          Soy estudiante de Ingeniería en Software y Negocios Digitales, segundo año. Tengo 20 años y me apasiona hacer proyectos sociales que impacten positivamente a la sociedad y al medio ambiente. Mi sueño es tener mi propia empresa reconocida mundialmente por proyectos sostenibles, y también un restaurante. Lo que más disfruto del desarrollo web es la parte gráfica: diseñar y crear interfaces lindas e intuitivas.
+        </p>
+      </div>
+    </section>
 
+    <section class="materia">
+      <h2>Descripción del Curso</h2>
+      <p>
+        Este curso introduce los fundamentos esenciales del desarrollo web: HTML, CSS y JavaScript. A través de estos lenguajes, los estudiantes aprenderán a construir sitios web funcionales, visualmente atractivos y con contenido dinámico.
+      </p>
 
-  <h1>Guía 2 - Ejemplos</h1>
-  <p>Haz clic en los botones para ver cada ejemplo:</p>
+      <h3>Contenidos</h3>
+      <div class="contenido-materia">
+        <h4>UNIDAD I: INTRODUCCIÓN AL HTML</h4>
+        <ul>
+          <li>Elementos HTML.</li>
+          <li>Semántica del HTML.</li>
+          <li>Atributos HTML.</li>
+        </ul>
 
-  <a href="20245425_Guia2/pelicula.html" class="boton">Ejemplo 1</a>
-  <a href="20245425_Guia2/tablero.html" class="boton">Ejemplo 2</a>
-  <a href="20245425_Guia2/MiBiografia.html" class="boton">Ejemplo 3</a>
+        <h4>UNIDAD II: INTRODUCCIÓN A LAS HOJAS DE ESTILO EN CASCADA (CSS)</h4>
+        <ul>
+          <li>Selectores CSS.</li>
+          <li>Propiedades CSS.</li>
+          <li>Modelo de caja.</li>
+        </ul>
 
-  <h1>Guía 3 - Ejemplos</h1>
-  <p>Haz clic en los botones para ver cada ejemplo:</p>
+        <h4>UNIDAD III: MAQUETACIÓN DE SITIOS WEB</h4>
+        <ul>
+          <li>Posicionamiento y visualización.</li>
+          <li>Diseño de layout básico.</li>
+          <li>Diseño responsivo y media queries.</li>
+          <li>Introducción a Flexbox.</li>
+          <li>CSS Grid.</li>
+        </ul>
 
-  <a href="20245425_Guia3/oscares.html" class="boton">Ejemplo 1</a>
-  <a href="20245425_Guia3/menu_horizontal.html" class="boton">Ejemplo 2</a>
-  <a href="20245425_Guia3/index.html" class="boton">Ejemplo 3</a>
-   <a href="20245425_Guia3/analisis.html" class="boton">Ejemplo 4</a>
+        <h4>UNIDAD IV: FRAMEWORKS DE DISEÑO WEB RESPONSIVO</h4>
+        <ul>
+          <li>Malla de Bootstrap.</li>
+          <li>Utilidades para Bootstrap.</li>
+          <li>Elementos Bootstrap.</li>
+        </ul>
 
-  <footer>
-    &copy; 2025 - Guía 1 de Ejercicios
-  </footer>
+        <h4>UNIDAD V: INTRODUCCIÓN A JAVASCRIPT</h4>
+        <ul>
+          <li>Introducción a Javascript y su sintaxis.</li>
+          <li>Estructuras de control.</li>
+          <li>Arreglos y objetos.</li>
+          <li>Funciones y eventos.</li>
+          <li>Programación Orientada a Objetos en Javascript.</li>
+        </ul>
 
+        <h4>UNIDAD VI: EL MODELO DE OBJETOS DEL DOCUMENTO (DOM) Y JAVASCRIPT ASÍNCRONO</h4>
+        <ul>
+          <li>Manipulación del Document Object Model (DOM).</li>
+          <li>Notación de Objetos de Javascript (JSON).</li>
+          <li>Almacenamiento local: localStorage y sessionStorage.</li>
+          <li>Programación asíncrona en Javascript.</li>
+          <li>AJAX.</li>
+          <li>Consumo de APIs.</li>
+          <li>Almacenamiento de datos en Firebase.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="guias">
+
+      <!-- Guía 1 -->
+      <div class="guia">
+        <h2>Guía 1 - Introducción y conceptos básicos de HTML y CSS</h2>
+        <p>Se trabajaron los conceptos básicos de HTML y estilos CSS, creando páginas simples con estructura y formato.</p>
+        <a href="20245425_Guia1/estilos_embebidos.html" class="boton">Ejemplo 1</a>
+        <a href="20245425_Guia1/ejemplo2.html" class="boton">Ejemplo 2</a>
+        <a href="20245425_Guia1/paises.html" class="boton">Ejemplo 3</a>
+        <a href="20245425_Guia1/scorpion.html" class="boton">Ejemplo 4</a>
+      </div>
+
+      <!-- Guía 2 -->
+      <div class="guia">
+        <h2>Guía 2 - Selectores CSS avanzados y modelo de caja</h2>
+        <p>Se abordaron tablas, listas, imágenes, videos y otros elementos multimedia aplicados en sitios web.</p>
+        <a href="20245425_Guia2/pelicula.html" class="boton">Ejemplo 1</a>
+        <a href="20245425_Guia2/tablero.html" class="boton">Ejemplo 2</a>
+        <a href="20245425_Guia2/MiBiografia.html" class="boton">Ejemplo 3</a>
+      </div>
+
+      <!-- Guía 3 -->
+      <div class="guia">
+        <h2>Guía 3 - Posicionamiento, visualización y maquetación de sitios Web</h2>
+        <p>Se aplicaron conceptos de diseño adaptativo con media queries, menús horizontales y mejores prácticas en CSS.</p>
+        <a href="20245425_Guia3/oscares.html" class="boton">Ejemplo 1</a>
+        <a href="20245425_Guia3/menu_horizontal.html" class="boton">Ejemplo 2</a>
+        <a href="20245425_Guia3/index.html" class="boton">Ejemplo 3</a>
+        <a href="20245425_Guia3/analisis.html" class="boton">Ejemplo 4</a>
+      </div>
+
+      <!-- Guía 4 -->
+      <div class="guia">
+        <h2>Guía 4 - Introducción al Responsive Design</h2>
+        <p>Se usó la meta-etiqueta viewport y media queries para aplicar reglas de estilo según el tamaño del navegador.</p>
+        <a href="20245425_Guia4/mediaqueries.html" class="boton">Ejemplo 1</a>
+        <a href="20245425_Guia4/index.html" class="boton">Ejemplo 2</a>
+      </div>
+    </section>
+
+    <section class="foda">
+      <div class="fortaleza">
+        <h3>Fortalezas 💪</h3>
+        <p>Tengo una buena comprensión de HTML y CSS. Puedo crear sitios web ordenados, con estética y estructura coherente. También tengo facilidad para aprender nuevas herramientas.</p>
+      </div>
+      <div class="oportunidad">
+        <h3>Oportunidades 🚀</h3>
+        <p>El curso me permite fortalecer mis habilidades, trabajar en proyectos reales y expandir mi conocimiento en JavaScript y frameworks modernos.</p>
+      </div>
+      <div class="debilidad">
+        <h3>Debilidades 🧩</h3>
+        <p>Debo mejorar mi lógica en programación y el uso de funciones complejas en JavaScript.</p>
+      </div>
+      <div class="amenaza">
+        <h3>Amenazas ⚠️</h3>
+        <p>El tiempo limitado por otras materias y la constante evolución de la tecnología pueden dificultar mantenerme actualizada.</p>
+      </div>
+    </section>
+
+    <!--  FOOTER -->
+    <footer>
+      &copy; 2025 - Portafolio Estudiantil | Jade Nicole Cárcamo Vásquez
+    </footer>
+  </div>
 </body>
 </html>
 
